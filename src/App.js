@@ -1,19 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Navbar/Navbar';
-import {BrowserRouter as Router} from 'react-router-dom';
-import Sidebar from './Sidebar/Sidebar';
-import React, {useState} from 'react';
-import HomeHero from './HomeHero/HomeHero';
-import Contact from "./Contact/Contact";
-import {FaPhone} from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Post from './Post/Post';
-import {postOne, awardsData} from './Data/Data';
-import Awards from './Awards/Awards';
-import Footer from './Footer/Footer';
-import InfoSpacing from './Footer/InfoSpacing';
 
+import './App.css';
+
+import {BrowserRouter as Router,Routes as Switch,Route} from 'react-router-dom';
+
+import React, {useState} from 'react';
+
+import {postOne, awardsData} from './Data/Data';
+
+import Home from './Home';
 
 
 function App() {
@@ -29,14 +23,11 @@ function changeState(){
 
   return (
     <Router>
-      <Sidebar change={changeState} isOpen={isOpen}/>
-      <Navbar change={changeState} openValue={isOpen}/>
-      <HomeHero/>
-      <Contact>Skontaktuj się z nami: +48 697988875 <FaPhone></FaPhone></Contact>
-      <Post {...postOne}/>
-      <Awards {...awardsData}/>
-      <Footer/>
-      <InfoSpacing/>
+        <Switch>
+        <Route path="/" element={<Home/>} exact />
+
+        </Switch>
+            
     </Router>
   );
 }
