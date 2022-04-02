@@ -8,7 +8,7 @@ import React, {useState} from 'react';
 import {postOne, awardsData} from './Data/Data';
 
 import Home from './Home';
-
+import Oferta from './Pages/Oferta';
 
 function App() {
 
@@ -25,7 +25,7 @@ function changeState(){
     <Router>
         <Switch>
         <Route path="/" element={<Home/>} exact />
-
+        <Route path="/oferta" element={<Oferta/>} exact />
         </Switch>
             
     </Router>

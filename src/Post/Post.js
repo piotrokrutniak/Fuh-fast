@@ -5,12 +5,12 @@ import { PostContainer,PostWrapper, InfoRow, LeftColumn, TopText, Title, Subtitl
 export default function Post({...props}){
     
     return(
-        <PostContainer>
-            <PostWrapper>
+        <PostContainer lightBg={props.darkText}>
+            <PostWrapper lightBg={props.lightBg}>
                 <InfoRow imgStart={props.imgStart}>
                     <LeftColumn>
                         <TextWrapper>
-                            <TopText>{props.topLine}</TopText>
+                            <TopText darkText={props.darkText}>{props.topLine}</TopText>
                             <Title lightText={props.lightText}>{props.headline}</Title>
                             <Subtitle darkText={props.darkText}>{props.desription}</Subtitle>
                             <BtnWrap>

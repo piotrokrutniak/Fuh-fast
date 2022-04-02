@@ -10,4 +10,5 @@ export const Button =  styled(Link)`
     width: 200px;
     display: flex;
     text-align:center;
+    cursor: pointer;
 `

@@ -25,7 +25,7 @@ export default function Navbar(props){
                 <NavList>
                     <NavLinks to='/'>Kontakt </NavLinks>
                     <NavLinks to='/'>Realizacje</NavLinks>
-                    <NavLinks to='/'>Oferta</NavLinks>
+                    <NavLinks to='/oferta'>Oferta</NavLinks>
                 </NavList>
             </NavbarContainer>
         </Nav>

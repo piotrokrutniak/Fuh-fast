@@ -100,7 +100,9 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
     height: 80px;
 `
-export const NavLinks = styled(LinkScroll)`
+
+//export const NavLinks = styled(LinkScroll)`
+export const NavLinks = styled(LinkRouter)`
     
 
     color:white;
@@ -110,7 +112,7 @@ export const NavLinks = styled(LinkScroll)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-    hover:{order-bottom: 3px solid #33ffd6;}
+    
     &:hover,
     &.active{
         border-bottom: 3px solid #33ffd6;
