@@ -5,9 +5,9 @@ import { Link as LinkScroll } from "react-scroll"
 export const AwardsContainer = styled.div`
     color: white;
     background: rgba(60,60,60,0.2);
-    
+    border: solid white 40px;
     margin: auto;
-    padding-top:20px;
+    
     background: ${({lightBg}) => lightBg ? 'white': '#010606'})} ;
     
     @media screen and (max-width:768px){
@@ -17,10 +17,12 @@ export const AwardsContainer = styled.div`
 `
 export const AwardsWrapper = styled.div`
     display: grid;
+    min-height: 600px;
     background: rgba(60,60,60,0.2);
     z-index:1;
     height:860px;
     width: 100%;
+    
     max-width:1100px;
     margin-right:auto;
     margin-left:auto;
@@ -36,10 +38,10 @@ export const AwardsRow = styled.div`
     grid-template-areas: ${({imgStart})=>(imgStart ? `'RightColumn LeftColumn'`:`'LeftColumn RightColumn'`)};
     background: ${({lightBg}) => (lightBg ? 'black': 'white')} ;
     padding: 20px 0;
-
+    min-height: 600px;
     @media screen and (max-width:1023px){
     grid-template-areas: ${({imgStart})=>(imgStart ? `'RightColumn' 'LeftColumn'`:`'LeftColumn LeftColumn' 'RightColumn RightColumn'`)};
-    max-width:600px;
+    
     margin: auto;
     }
 `
@@ -91,10 +93,11 @@ export const Subtitle = styled.p`
 `
 export const BtnWrap = styled.div`
     display:flex;
+    
     justify-content: flex-start;
-    @media screen and (max-width:1023px){
+    @media screen and (max-width:760px){
 
-        justify-content: flex-start;
+        justify-content: space-around;
     }
 
 `
@@ -108,6 +111,12 @@ export const Button =  styled(LinkScroll)`
     font-weight:600;
     font-size:1.5rem;
     margin-right: 20px;
+    @media screen and (max-width:460px){
+    font-size: 1.2rem !important;
+    }
+    @media screen and (max-width:760px){
+    margin-right: 0px;
+}
 `
 
 export const AwardContainer = styled.div`

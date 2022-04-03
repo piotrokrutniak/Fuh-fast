@@ -1,9 +1,11 @@
 import React, {useState} from "react";
-import { Panel, PanelDesc, PanelDescFlex, PanelDescWrapper, PanelImg, PanelImgWrapper, PanelsContainer, PanelsGrid, PanelsWrapper, PanelTitle } from "./Panels.elements";
+import { H1 } from "../Footer/Footer.components";
+import { Panel, PanelDesc, PanelDescFlex, PanelDescWrapper, PanelImg, PanelImgWrapper, PanelsContainer, PanelsGrid, PanelsWrapper, PanelTitle,ContainterTitle } from "./Panels.elements";
 
 export default function Panels(props){
     return(
         <PanelsContainer>
+            <ContainterTitle>W nasze ofercie znajdziecie pańswo:</ContainterTitle>
         <PanelsWrapper>
             <PanelsGrid>
 

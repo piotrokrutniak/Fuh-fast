@@ -21,10 +21,12 @@ export const PanelsWrapper = styled.div`
         padding: 0px !important;
         border: 10px solid transparent;
     }
-    @media screen and (max-width: 630px){
+    @media screen and (max-width: 760px){
         padding: 0px !important;
-        border: 10px solid transparent;
+        border: 0px solid transparent;
     }
+
+    
 `
 export const PanelsGrid = styled.div`
     display: grid;
@@ -35,7 +37,7 @@ export const PanelsGrid = styled.div`
     position: relative;
     
     @media screen and (max-width: 760px){
-        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
     }
 `
 export const Panel = styled.div`
@@ -45,7 +47,7 @@ export const Panel = styled.div`
     color: white;
     min-height: 400px;
     width: 350px;
-    rgba(245,245,245);
+    
     -webkit-box-shadow: 0px 7px 24px -4px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 7px 24px -4px rgba(66, 68, 90, 1);
     box-shadow: 0px 7px 24px -4px rgba(66, 68, 90, 1);
@@ -55,12 +57,19 @@ export const Panel = styled.div`
     }
 
     @media screen and (max-width: 760px){
-        width: 100%;
+        max-width: 100%;
         min-width: 430px;
         margin: 0px auto;
         border-radius: 0px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
         &:hover{
         transform: scale(1.00);
+        
+    }
+    @media screen and (max-width: 400px){
+        min-width: 360px;
     }
     }
 `
@@ -73,10 +82,13 @@ export const PanelImgWrapper = styled.div`
     object-fit: cover;
     border-radius: 20px;
     @media screen and (max-width: 760px){
-        width: 100%;
+        max-width: 100%;
         min-width: 430px;
         margin: 0px auto;
         border-radius: 0px;
+    }
+    @media screen and (max-width: 400px){
+        min-width: 360px;
     }
 `
 
@@ -90,10 +102,13 @@ export const PanelImg = styled.img`
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     @media screen and (max-width: 760px){
-        width: 100%;
+        max-width: 100%;
         min-width: 430px;
         margin: 0px auto;
         border-radius: 0px;
+    }
+    @media screen and (max-width: 400px){
+        min-width: 360px;
     }
 `
 
@@ -124,11 +139,27 @@ export const PanelDesc = styled.h2`
     min-height: 30px;
     border-radius: 20px;
     font-weight: 500;
-    background: 
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    
     @media screen and (max-width: 630px){
         
         border-radius: 0px !important;
     }
+`
+
+export const ContainterTitle = styled.h1`
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    border-top: 70px solid transparent ;
+    font-weight: 500;
+    
+    
+    @media screen and (max-width: 760px){
+        border-top: 50px solid transparent ;
+        border-bottom: 50px solid transparent ;
+        border-left: 50px solid transparent ;
+        border-right: 50px solid transparent ;
+        font-size: 30px;
+    }
+    
 `

@@ -22,7 +22,7 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index:10;
-
+    max-width: 100%;
     @media screen and (max-width: 960px){
         transition:0.8s all ease;
     }
@@ -120,3 +120,20 @@ export const NavLinks = styled(LinkRouter)`
     }
 `
 
+export const NavLinksScroll = styled(LinkScroll)`
+    
+
+    color:white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    
+    &:hover,
+    &.active{
+        border-bottom: 3px solid #33ffd6;
+        
+    }
+`

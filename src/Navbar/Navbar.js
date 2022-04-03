@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Nav, NavbarContainer, NavbarLogo, MobileIcon, NavList, NavItem, NavLinks, LogoSvg} from "./Navbar.elements";
 import {FaBars} from 'react-icons/fa';
 import {ReactComponent as Logo} from '../img/ac.svg';
-
+import { animateScroll } from "react-scroll/modules";
 
 export default function Navbar(props){
     
@@ -11,7 +11,7 @@ export default function Navbar(props){
     const [openValue,setOpenValue]=useState(props.openValue)
     
     //const Svg = ac;
-
+    
 
     //console.log(isOpen)
     return(
@@ -23,7 +23,7 @@ export default function Navbar(props){
                     <FaBars></FaBars>
                 </MobileIcon>
                 <NavList>
-                    <NavLinks to='/'>Kontakt </NavLinks>
+                    <NavLinks to='/kontakt'>Kontakt </NavLinks>
                     <NavLinks to='/'>Realizacje</NavLinks>
                     <NavLinks to='/oferta'>Oferta</NavLinks>
                 </NavList>

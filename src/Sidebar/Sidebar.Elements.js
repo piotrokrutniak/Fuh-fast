@@ -39,7 +39,7 @@ export const SidebarWrapper = styled.div`
     justify-content: space-around;
 `
 
-export const SidebarLink = styled(LinkScroll)`
+export const SidebarLink = styled(LinkRouter)`
     display: flex;
     align-items: center;
     justify-content: center;

@@ -11,6 +11,12 @@ export const Contact = styled.div`
     border-radius:20px;
     font-weight: 500;
     z-index:999;
+
+    @media screen and (max-width: 760px){
+        display: flex;
+        margin: auto;
+        align-self: center;
+    }
 `
 
 export default Contact

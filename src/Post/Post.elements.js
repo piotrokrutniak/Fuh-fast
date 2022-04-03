@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const PostContainer = styled.div`
     color: white;
-    
+    max-width: 100%;
     background: ${({lightBg}) => (lightBg ? 'rgba(60,60,60,0.2)': '#f9f9f9')};
     margin: auto;
     padding-top:20px;
@@ -17,7 +17,7 @@ export const PostWrapper = styled.div`
     
     
     z-index:1;
-    min-height:860px;
+    min-height:calc(100vh - 80px);
     width: 100%;
     max-width:100%;
     margin-right:auto;
@@ -29,10 +29,10 @@ export const PostWrapper = styled.div`
 
 export const InfoRow = styled.div`
     display:grid;
-    grid-auto-columns:minmax(auto,1fr);
+    grid-auto-columns:minmax(360px,1fr);
     align-items:center;
     grid-template-areas: ${({imgStart})=>(imgStart ? `'RightColumn LeftColumn'`:`'LeftColumn RightColumn'`)};
-
+    
     @media screen and (max-width:1023px){
     grid-template-areas: ${({imgStart})=>(imgStart ? `'RightColumn' 'LeftColumn'`:`'RightColumn' 'LeftColumn'`)};
     max-width:600px;
@@ -43,29 +43,36 @@ export const InfoRow = styled.div`
 export const LeftColumn =styled.div`
     margin-bottom:15px;
     border-top: 20px solid transparent;
-    padding:0 15px;
+    max-width: 100%;
     grid-area: LeftColumn;
     display: flex;
     align-items: center;
     border-left: solid 30px transparent;
     
-    
+    @media screen and (max-width: 760px){
+        border-left: solid 30px transparent !important;
+        border-right: solid 30px transparent !important;
+    }
 `
 export const RightColumn =styled.div`
     margin-bottom:15px;
-    padding:0 15px;
-    
+    //
+    max-width: 100%;
     grid-area: RightColumn;
     display: flex;
     justify-items:center;
     align-items: center;
     margin: auto;
+    @media screen and (max-width:760){
+        padding: 0 0!important;
+    }
     
 `
 export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top:0;
     padding-bottom:60px;
+    
 `
 
 export const TopText = styled.p`
@@ -106,15 +113,17 @@ export const BtnWrap = styled.div`
 
 export const ImgWrapper = styled.div`
     width: 100%;
-max-height:600px;
-object-fit:cover;
-min-height: 250px;
-position: relative;
-object-fit: cover;
-   border-bottom: 20px solid transparent;
+    max-width: 100%;
+    max-height:600px;
+    object-fit:cover;
+    min-height: 250px;
+    position: relative;
+    object-fit: cover;
+    border-bottom: 20px solid transparent;
 `
 
 export const Img = styled.img`
+    position: relative;
     display: flex;
     flex-shrink: 0;
     object-fit: cover;
@@ -127,7 +136,8 @@ export const Img = styled.img`
 `
 
 export const Button =  styled(LinkScroll)`
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border: solid 20px ${({dark}) => (dark ? '#33ffd6' : 'black')};
     border-radius:20px;
     text-align:center;
@@ -136,6 +146,7 @@ export const Button =  styled(LinkScroll)`
     font-weight:600;
     font-size:1.5rem;
     cursor: pointer;
+    
 `
 /*background: ${({dark}) => (dark ? '#33ffd6' : 'black')};
     color: ${({dark}) => (dark ? 'black' : '#33ffd6')};*/
