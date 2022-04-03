@@ -35,6 +35,7 @@ export const ofertaOne = {
     primary:true
 }
 
+
 export const ofertaTwo = {
     id:'oferta1',
     bgc: "rgba(60,60,60,0.2);",
@@ -45,7 +46,7 @@ export const ofertaTwo = {
     lightTextDesc:true,
     topLine: 'Montaż, serwis, wymiana',//Jacek Stawowy
     headline:'Pompy ciepła',
-    desription:`Przeprowadzamy kompleksowy montaż klimatyzacji, domowej jak i biurowej. Zajmujemy się wszystkim od zakupu jednostki, przez przygotowanie aż po podpięcie i oddanie do użytku. \n Nasze usługi dotyczące kliatyzacji nie ograniczają się do samego montażu, oferujemy również przegląd, serwis i wymianę jednostek. `,
+    desription:`Przeprowadzamy kompleksowy montaż klimatyzacji, domowej jak i biurowej. Zajmiemy się wszystkim od zakupu jednostki, przez przygotowanie, aż do podpięcia i oddania do użytku. \n Nasze usługi dotyczące kliatyzacji nie ograniczają się do samego montażu, oferujemy również przegląd, serwis i wymianę jednostek. `,
     buttonLabel:'Wyświetl naszą ofertę',
     img: require('../img/heat-pump-3.jpg'),
     alt:'Klimatyzator',
@@ -86,5 +87,42 @@ export const awardsData = {
     img: require('../img/img-2.jpg'),
     alt:'Klimatyzator',
     dark:false,
+    primary:true
+}
+
+export const kontaktOne = {
+    id:'kontakt1',
+    bgc:'#f9f9f9',
+    lightBg:true,
+    imgStart:true,
+    darkText:true,
+    lightText:false,
+    lightTextDesc:false,
+    topLine: 'FUH Fast',//Jacek Stawowy
+    headline:'Kontakt z nami',
+    desription:`Mogą się państwo z nami skontaktować codziennie, w godzinach od 9 do 19. Do państwa dyspozycji jest również adres email podany poniżej jak i formularz kontaktowy na dole strony.`,
+    buttonLabel:'Przejdź do formularza',
+    img: require('../img/phone.jpeg'),
+    alt:'Telefon',
+    dark:true,
+    primary:true
+}
+
+export const kontaktTwo = {
+    id:'kontakt1',
+    bgc: "rgba(60,60,60,0.2);",
+    lightBg:false,
+    imgStart:false,
+    darkText:false,
+    lightText:true,
+    lightTextDesc:true,
+    topLine: 'Pon-Pt, 9-18',//Jacek Stawowy
+    headline:'Dane kontaktowe',
+    desription:`Przeprowadzamy kompleksowy montaż klimatyzacji, domowej jak i biurowej. Zajmujemy się wszystkim od zakupu jednostki, przez przygotowanie aż po podpięcie i oddanie do użytku. \n Nasze usługi dotyczące kliatyzacji nie ograniczają się do samego montażu, oferujemy również przegląd, serwis i wymianę jednostek. `,
+    dataArray: ["Telefon: +48 697988875","Email: fast@fuh-fast.pl","Adres: Zakrzowiec 79, Podłęże","NIP: 679-192-43-00"],
+    buttonLabel:'Wyświetl naszą ofertę',
+    img: require('../img/heat-pump-3.jpg'),
+    alt:'Klimatyzator',
+    dark:true,
     primary:true
 }

@@ -17,7 +17,7 @@ const Sidebar = ({isOpen,change}) => {
              <SidebarLink to="/" onClick={change}>Realizacje</SidebarLink>
              <SidebarLink to='/oferta' onClick={change}>Oferta</SidebarLink>
              <SideBtnWrap onClick={change}>
-                <SidebarRoute to="/" onClick={change}>Kontakt</SidebarRoute>
+                <SidebarRoute to="/" onClick={change}>Home</SidebarRoute>
              </SideBtnWrap>
           </SidebarMenu>
           

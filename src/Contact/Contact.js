@@ -14,8 +14,11 @@ export const Contact = styled.div`
 
     @media screen and (max-width: 760px){
         display: flex;
-        margin: auto;
-        align-self: center;
+        top: 50%;
+        left: 50%;
+        height: 20px;
+        width: 300px;
+        transform: translate(-50%, 400%);
     }
 `
 
